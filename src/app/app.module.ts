@@ -11,6 +11,7 @@ import { ShellComponent } from './core/components/shell/shell.component';
 import { HomePageComponent } from './core/pages/home/home-page.component';
 
 import { appRoutes } from './app.routes';
+import { materialModules } from './material-modules';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { appRoutes } from './app.routes';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ...materialModules,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

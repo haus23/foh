@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './home-page.component.html',
-  styles: [
-  ]
+  styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
 

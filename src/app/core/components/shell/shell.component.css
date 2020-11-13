@@ -1,0 +1,33 @@
+.root-container {
+  position: relative;
+}
+
+.mat-toolbar {
+  position: relative;
+  z-index: 100;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav span {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.brand, .actions {
+  flex: 0 0 auto;
+}
+
+.brand img {
+  height: 26px;
+  margin: 0 4px 3px 0;
+  vertical-align: middle;
+}
+
+.main-menu {
+  flex: 1 0 auto;
+}

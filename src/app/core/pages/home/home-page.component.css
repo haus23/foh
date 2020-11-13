@@ -1,0 +1,69 @@
+.content {
+  position: relative;
+}
+
+.body {
+  position: relative;
+  z-index: 30;
+  padding: 2rem 2rem 0;
+  width: 40%;
+  line-height: 1.4;
+}
+
+.body h1 {
+  margin: 0;
+}
+
+.body h1 small {
+  display: block;
+  margin-top: 0.5rem;
+  color: rgba(0, 0, 0, 0.63)
+}
+
+.angle {
+  z-index: 20;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  color: white;
+  transform: translateX(50%);
+  height: 480px;
+}
+
+.marie {
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  opacity: 0.9;
+  top: 0;
+  right: 0;
+  width: 50%;
+}
+.marie img {
+  width: 100%;
+  height: 480px;
+  object-position: 80% 70%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .body {
+    width: 50%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .body {
+    width: auto;
+  }
+  .angle { display: none; }
+  .marie {
+    margin-top: 2rem;
+    position: static;
+    width: 100%;
+  }
+  .marie img {
+    height: 20rem;
+  }
+}

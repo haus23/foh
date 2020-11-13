@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-shell',
   templateUrl: './shell.component.html',
-  styles: [
-  ]
+  styleUrls: ['./shell.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ShellComponent implements OnInit {
 

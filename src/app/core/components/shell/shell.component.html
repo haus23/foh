@@ -1,4 +1,22 @@
-<p>shell works!</p>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<div class="root-container">
+  <mat-toolbar class="mat-elevation-z2">
+    <nav>
+      <div class="brand">
+        <a mat-button [routerLink]="['/']">
+          <img height="26" src="/assets/logo.svg">
+          <span>haus23.net</span>
+        </a>
+      </div>
+      <div class="main-menu">
+        <a mat-button href="#">Forum</a>
+        <a mat-button href="#">Tipprunde</a>
+      </div>
+      <div class="actions">
+        <a mat-button href="#">Log In</a>
+      </div>
+    </nav>
+  </mat-toolbar>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
