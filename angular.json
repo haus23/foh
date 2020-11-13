@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "foh"
+  "defaultProject": "foh",
+  "cli": {
+    "analytics": false
+  }
 }
