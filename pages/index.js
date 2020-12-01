@@ -1,6 +1,7 @@
 import {useState} from 'react';
 
 import Head from 'next/head'
+import {Transition} from '@headlessui/react';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,8 +52,15 @@ export default function Home() {
               </nav>
             </div>
 
-            { isOpen &&
-            <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <Transition show={isOpen}
+                        className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                        enter="duration-150 ease-out"
+                        enterFrom="opacity-0 scale-95"
+                        enterTo="opacity-100 scale-100"
+                        leave="duration-100 ease-in"
+                        leaveFrom="opacity-100 scale-100"
+                        leaveTo="opacity-0 scale-95"
+            >
               <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
@@ -88,8 +96,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-            }
+            </Transition>
 
             <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
               <div className="sm:text-center lg:text-left">
